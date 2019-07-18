@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+     <script type="text/javascript">
+     function validate(){
+          var username=document.getElementById("t1");
+          var password=document.getElementById("t2");
+          if(username.value.trim()==""){
+               username.style.border="solid 3px red";
+               return false;
+          }
+          else if(password.value.trim()==""){
+               password.style.border="solid 3px red";
+               return false;
+          }
+          else if(password.value.trim().length<5){
+               document.getElementById("pass").style.visibility="visible";
+               return false;
+          }
+          else
+          return true;
+     }
+     
+     
+     </script>
+     <body>
+   
+     <fieldset>
+              <legend> Sign up </legend>
+              <form name="Signup" action="Signup" onsubmit="return validate()" method="get" >
+              <label> user id*</label> &nbsp;
+              <input type="text" name="userid" placeholder="enter userid" id="t1">
+              <br/>
+              <br/>
+              <label> user name*</label> &nbsp;
+              <input type="text" name="username" placeholder="enter uname" id="t1" >
+              
+              <br/>
+              <br/>
+               <label> Email*</label> &nbsp;
+              <input type="text" name="email" placeholder="enter email">
+              
+              <br/>
+              <br/>
+              <label> Password*</label> &nbsp;
+              <input type="password" name="password" placeholder="enter password" id="t2" >
+              <label id="pass" style="color:red;visibility:hidden"> Password is too short</label>
+              
+              <br/>
+              <br/>
+                 Credit: &nbsp;
+              <input type="number" name="credit" required>
+              <br/>
+              <br/>
+              Gender:   &nbsp; &nbsp;
+              <input type="radio" name="gender" value="m">M &nbsp; &nbsp;
+              <input type="radio" name="gender" value="f">F &nbsp;
+              <br/>
+              <br/>
+              <input type="submit" value="signup">
+              <input type="reset" value="cancel">
+              </form>
+             
+</fieldset>
+</body>
+</html>
